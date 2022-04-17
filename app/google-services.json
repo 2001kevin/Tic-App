@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "294149372625",
+    "project_id": "ticappproject",
+    "storage_bucket": "ticappproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:294149372625:android:7772e4f0100a097aace3f0",
+        "android_client_info": {
+          "package_name": "com.projectprogmob.ticapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "294149372625-su3svmpdckjfp7j1khlr51ct2453cqah.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDztsSaCFYCCeBeHaOamq7ox835qaBrZzs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "294149372625-su3svmpdckjfp7j1khlr51ct2453cqah.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
