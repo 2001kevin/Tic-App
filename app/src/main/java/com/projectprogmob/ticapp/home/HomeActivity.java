@@ -22,9 +22,7 @@ public class HomeActivity extends AppCompatActivity {
 
         tvUsername = findViewById(R.id.tv_nama);
 
-        tvUsername.setText(getIntent().getStringExtra("username"));
-
-        /*DashboardFragment fragmentHome = new DashboardFragment();
+        DashboardFragment fragmentHome = new DashboardFragment();
         replaceFragment(fragmentHome);
 
         ImageView menu1 = findViewById(R.id.iv_menu1);
@@ -57,7 +55,6 @@ public class HomeActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.layout_frame, fragment);
         fragmentTransaction.commit();
-    }*/
     }
 
 }
