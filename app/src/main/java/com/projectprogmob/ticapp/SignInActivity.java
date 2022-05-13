@@ -71,15 +71,19 @@ public class SignInActivity extends AppCompatActivity {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             if(dataSnapshot.hasChild(UsernameTxt)){
+
                                 final String getPassword = dataSnapshot.child(UsernameTxt).child("password").getValue(String.class);
                                 final String getFullname = dataSnapshot.child(UsernameTxt).child("fullname").getValue(String.class);
                                 final String getEmail = dataSnapshot.child(UsernameTxt).child("email").getValue(String.class);
                                 final String getPhone = dataSnapshot.child(UsernameTxt).child("phone").getValue(String.class);
 
+                                SharedPreferences.Editor edit = preferences.edit();
+                                edit.putString("fullname", "Welcome, " + getFullname).apply();
+                                edit.putString("email", getEmail).apply();
+                                edit.putString("phone", getPhone).apply();
+
                                 if(getPassword.equals(PasswordTxt)){
                                     Toast.makeText(SignInActivity.this, "Successfully Logged in", Toast.LENGTH_SHORT).show();
-                                    SharedPreferences.Editor edit = preferences.edit();
-                                    edit.putString("fullname", "Welcome, " + UsernameTxt).apply();
 
                                     //edit.putString("email", getEmail);
 

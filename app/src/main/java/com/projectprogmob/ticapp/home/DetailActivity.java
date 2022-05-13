@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -48,6 +49,16 @@ public class DetailActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent toHome = new Intent(DetailActivity.this, HomeActivity.class);
                 startActivity(toHome);
+            }
+        });
+
+        Button btnPilihBangku = findViewById(R.id.btn_pilih_bangku);
+
+        btnPilihBangku.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent toPilihBangku = new Intent(DetailActivity.this, PilihBangkuActivity.class);
+                startActivity(toPilihBangku);
             }
         });
 

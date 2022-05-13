@@ -59,31 +59,12 @@ public class SignUpActivity extends AppCompatActivity  {
                 final String phonetxt = etphone.getText().toString();
                 final String passwordtxt = etpassword.getText().toString();
                 final String conpasswordtxt = etconpassword.getText().toString();
-                final String noWhiteSpace = "(?=\\s+$)";
-                final String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-                final String passwordpattern = "^" +
-                        //"(?=.*[0-9])" +         //at least 1 digit
-                        //"(?=.*[a-z])" +         //at least 1 lower case letter
-                        //"(?=.*[A-Z])" +         //at least 1 upper case letter
-                        "(?=.*[a-zA-Z])" +      //any letter
-                        //"(?=.*[@#$%^&+=])" +    //at least 1 special character
-                        "(?=\\S+$)" +           //no white spaces
-                        ".{4,}" +               //at least 4 characters
-                        "$";
 
 
                 //CEK APAKAH USER MENGISI SEMUA FIELD NYA
                 if(fullnametxt.isEmpty() || usernametxt.isEmpty() || emailtxt.isEmpty() || phonetxt.isEmpty() || passwordtxt.isEmpty() || conpasswordtxt.isEmpty()){
                     Toast.makeText(SignUpActivity.this, "Mohon isi semua field!", Toast.LENGTH_SHORT).show();
-                }else if(!usernametxt.matches(noWhiteSpace)){
-                    Toast.makeText(SignUpActivity.this, "Username Must Be no WhiteSpace", Toast.LENGTH_LONG).show();
-
-                }else if (!emailtxt.matches(emailPattern)){
-                    Toast.makeText(SignUpActivity.this, "Invalid Email Address", Toast.LENGTH_LONG).show();
-                }else if (!passwordtxt.matches(passwordpattern)){
-                    Toast.makeText(SignUpActivity.this, "Password too weak", Toast.LENGTH_LONG).show();
-                }
-                else if(!passwordtxt.equals(conpasswordtxt)){
+                } else if(!passwordtxt.equals(conpasswordtxt)){
                     Toast.makeText(SignUpActivity.this, "Password tidak match", Toast.LENGTH_SHORT).show();
                 }else {
                     mDatabase.child("User").addValueEventListener(new ValueEventListener() {

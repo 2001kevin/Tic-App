@@ -55,17 +55,20 @@ public class DashboardFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         tvUsername = view.findViewById(R.id.tv_nama);
-        SharedPreferences preferences = this.getActivity().getSharedPreferences("shared_pref", Context.MODE_PRIVATE);
+        SharedPreferences preferences = this.getContext().getSharedPreferences("shared_pref", Context.MODE_PRIVATE);
         String fullname = preferences.getString("fullname",null);
         tvUsername.setText(fullname);
 
         recyclerView = view.findViewById(R.id.rv_nowplaying);
         recyclerView2 = view.findViewById(R.id.rv_comingsoon);
+
         databaseReference = FirebaseDatabase.getInstance("https://ticappproject-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("Film");
         recyclerView.setHasFixedSize(false);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL,false);
         recyclerView.setLayoutManager(layoutManager);
+
         LinearLayoutManager layoutManager2 = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL,false);
         recyclerView2.setLayoutManager(layoutManager2);
 
@@ -80,6 +83,7 @@ public class DashboardFragment extends Fragment {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                list.clear();
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
                     Film film = dataSnapshot1.getValue(Film.class);
                     list.add(film);
