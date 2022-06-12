@@ -75,6 +75,7 @@ public class DashboardFragment extends Fragment {
 
         list = new ArrayList<>();
         list = new ArrayList<>();
+
         nowPlayingAdapter = new NowPlayingAdapter(getContext(), list);
         recyclerView.setAdapter(nowPlayingAdapter);
         comingSoonAdapter = new ComingSoonAdapter(getContext(), list);
@@ -97,6 +98,7 @@ public class DashboardFragment extends Fragment {
 
             }
         });
+
 
 
     }

@@ -47,7 +47,7 @@ public class SignInActivity extends AppCompatActivity {
                 final String UsernameTxt = etUsername.getText().toString();
                 final String PasswordTxt = etPassword.getText().toString();
 
-                ImageView showpass = findViewById(R.id.show_pass);
+                /*ImageView showpass = findViewById(R.id.show_pass);
                 showpass.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -62,7 +62,7 @@ public class SignInActivity extends AppCompatActivity {
                             etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
                         }
                     }
-                });
+                });*/
 
                 if(UsernameTxt.isEmpty() || PasswordTxt.isEmpty()){
                     Toast.makeText(SignInActivity.this, "Please enter your username or password", Toast.LENGTH_SHORT).show();

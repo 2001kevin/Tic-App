@@ -1,7 +1,11 @@
 package com.projectprogmob.ticapp.home;
 
+import static android.content.Intent.ACTION_DIAL;
+
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -20,6 +24,7 @@ public class ProfileFragment extends Fragment {
 
     TextView tvFullname;
     TextView tvEmail;
+    TextView tvHelp;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,6 +40,7 @@ public class ProfileFragment extends Fragment {
 
         tvFullname = view.findViewById(R.id.tv_nama);
         tvEmail = view.findViewById(R.id.tv_email);
+        tvHelp = view.findViewById(R.id.tv_help);
 
         SharedPreferences preferences = this.getContext().getSharedPreferences("shared_pref", Context.MODE_PRIVATE);
         String fullname = preferences.getString("fullname", null);
@@ -42,6 +48,16 @@ public class ProfileFragment extends Fragment {
 
         tvFullname.setText(fullname);
         tvEmail.setText(email);
+
+        tvHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String number = "0822094239";
+                Intent callIntent = new Intent(ACTION_DIAL);
+                callIntent.setData(Uri.parse("tel:" + number));//change the number
+                startActivity(callIntent);
+            }
+        });
 
 
     }

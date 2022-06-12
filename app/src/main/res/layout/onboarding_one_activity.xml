@@ -8,7 +8,7 @@
     android:backgroundTintMode="add"
     tools:context=".onboarding.OnBoardingOneActivity">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_obOne"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_lanjut_obOne"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

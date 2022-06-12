@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.graphics.drawable.Icon;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -45,7 +46,7 @@ public class HomeActivity extends AppCompatActivity {
                 }else if(item.getItemId()==R.id.profile){
                     replaceFragment(new ProfileFragment());
                 }
-                return false;
+                return true;
             }
         });
     }

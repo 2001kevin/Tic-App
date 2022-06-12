@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
     <uses-permission-sdk-23 android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -15,6 +16,15 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.TicApp">
+        <activity
+            android:name=".home.TicketActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.CheckoutSuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.CheckoutActivity"
+            android:exported="false" />
         <activity
             android:name=".home.PilihBangkuActivity"
             android:exported="false" />

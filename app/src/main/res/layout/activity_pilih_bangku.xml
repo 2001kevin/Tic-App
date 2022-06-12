@@ -7,7 +7,7 @@
     android:background="@color/bgApps"
     tools:context=".onboarding.OnBoardingOneActivity">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_home"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -18,6 +18,7 @@
         android:fontFamily="@font/poppins"
         android:text="@string/beli_tiket"
         android:textColor="@color/white"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -100,14 +101,16 @@
         app:layout_constraintTop_toBottomOf="@+id/textView17">
 
         <ImageView
-            android:src="@drawable/ic_rectangle_booked"
+            android:id="@+id/a1"
+            android:src="@drawable/ic_rectangle_empty"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_marginRight="10dp"
             android:layout_height="match_parent"/>
 
         <ImageView
-            android:src="@drawable/ic_rectangle_booked"
+            android:id="@+id/a2"
+            android:src="@drawable/ic_rectangle_empty"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"/>
@@ -153,17 +156,19 @@
         app:layout_constraintTop_toBottomOf="@+id/ll_line">
 
         <ImageView
+            android:id="@+id/b1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_rectangle_booked" />
+            android:src="@drawable/ic_rectangle_empty" />
 
         <ImageView
+            android:id="@+id/b2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_rectangle_booked" />
+            android:src="@drawable/ic_rectangle_empty" />
 
         <TextView
             android:layout_width="0dp"
@@ -176,17 +181,19 @@
             android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/b3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_rectangle_booked" />
+            android:src="@drawable/ic_rectangle_empty" />
 
         <ImageView
+            android:id="@+id/b4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_rectangle_booked" />
+            android:src="@drawable/ic_rectangle_empty" />
 
     </LinearLayout>
 
@@ -204,17 +211,19 @@
         app:layout_constraintTop_toBottomOf="@+id/ll_line2">
 
         <ImageView
+            android:id="@+id/c1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_rectangle_booked" />
+            android:src="@drawable/ic_rectangle_empty" />
 
         <ImageView
+            android:id="@+id/c2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_rectangle_booked" />
+            android:src="@drawable/ic_rectangle_empty" />
 
         <TextView
             android:layout_width="0dp"
@@ -227,17 +236,19 @@
             android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/c3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_rectangle_booked" />
+            android:src="@drawable/ic_rectangle_empty" />
 
         <ImageView
+            android:id="@+id/c4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_rectangle_booked" />
+            android:src="@drawable/ic_rectangle_empty" />
 
     </LinearLayout>
 
@@ -255,17 +266,19 @@
         app:layout_constraintTop_toBottomOf="@+id/ll_line3">
 
         <ImageView
+            android:id="@+id/d1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_rectangle_booked" />
+            android:src="@drawable/ic_rectangle_empty" />
 
         <ImageView
+            android:id="@+id/d2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_rectangle_booked" />
+            android:src="@drawable/ic_rectangle_empty" />
 
         <TextView
             android:layout_width="0dp"
@@ -277,17 +290,19 @@
             android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/d3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_rectangle_booked" />
+            android:src="@drawable/ic_rectangle_empty" />
 
         <ImageView
+            android:id="@+id/d4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/ic_rectangle_booked" />
+            android:src="@drawable/ic_rectangle_empty" />
 
     </LinearLayout>
 

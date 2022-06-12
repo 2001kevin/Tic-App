@@ -52,12 +52,17 @@ public class DetailActivity extends AppCompatActivity {
             }
         });
 
-        Button btnPilihBangku = findViewById(R.id.btn_pilih_bangku);
 
+
+        Button btnPilihBangku = findViewById(R.id.btn_pilih_bangku);
         btnPilihBangku.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent toPilihBangku = new Intent(DetailActivity.this, PilihBangkuActivity.class);
+                toPilihBangku.putExtra("title", title);
+                toPilihBangku.putExtra("poster", poster);
+                toPilihBangku.putExtra("rating", rate);
+                toPilihBangku.putExtra("genre", genre);
                 startActivity(toPilihBangku);
             }
         });
