@@ -47,22 +47,6 @@ public class SignInActivity extends AppCompatActivity {
                 final String UsernameTxt = etUsername.getText().toString();
                 final String PasswordTxt = etPassword.getText().toString();
 
-                /*ImageView showpass = findViewById(R.id.show_pass);
-                showpass.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        if(etPassword.getTransformationMethod().equals(PasswordTransformationMethod.getInstance())){
-                            showpass.setImageResource(R.drawable.ic_visibility_off);
-                            //Show Password
-                            etPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                        }
-                        else{
-                            showpass.setImageResource(R.drawable.ic_visibility);
-                            //Hide Password
-                            etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                        }
-                    }
-                });*/
 
                 if(UsernameTxt.isEmpty() || PasswordTxt.isEmpty()){
                     Toast.makeText(SignInActivity.this, "Please enter your username or password", Toast.LENGTH_SHORT).show();
@@ -84,9 +68,7 @@ public class SignInActivity extends AppCompatActivity {
 
                                 if(getPassword.equals(PasswordTxt)){
                                     Toast.makeText(SignInActivity.this, "Successfully Logged in", Toast.LENGTH_SHORT).show();
-
                                     //edit.putString("email", getEmail);
-
                                     Intent toHome = new Intent(SignInActivity.this, HomeActivity.class);
                                     startActivity(toHome);
                                     finish();
